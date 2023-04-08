@@ -12,8 +12,8 @@ import { setToken } from '../../../../../AsyncStorage';
 
 const Form = ({ textColor }) => {
 	const [ viewPassowrd, setViewPassword ] = useState(true);
-	const [ email, setEmail ] = useState('');
-	const [ password, setPassword ] = useState('');
+	const [ email, setEmail ] = useState('aaron@gmail.com');
+	const [ password, setPassword ] = useState('admin123');
 	const [ loading, setLoading ] = useState(false);
 	const [ error, setError ] = useState('');
 

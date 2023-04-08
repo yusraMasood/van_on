@@ -15,7 +15,7 @@ const RootStack = () => {
 	const { isLoading, token, user } = useSelector((state) => state);
 
 	const dispatch = useDispatch();
-	// console.log("hello");
+	console.log("hello",isLoading,token,user);
 
 	useEffect(
 		() => {
@@ -36,7 +36,8 @@ const RootStack = () => {
 		<Stack.Navigator headerMode='none' screenOptions={{ animationEnabled: true }}>
 			{isLoading ? (
 				<Stack.Screen name='Loading' component={Loading} />
-			) : user && token ? (
+			) : 
+			user&& token ? (
 				<Stack.Screen name='BottomTabNavigator' component={BottomTabNavigator} />
 			) : (
 				<Stack.Screen name='AuthStack' component={AuthStack} />
